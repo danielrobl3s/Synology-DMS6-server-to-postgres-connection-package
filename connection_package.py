@@ -5,11 +5,11 @@ import sys
 def connect_to_nas_postgres():
     # Connection parameters
     params = {
-        'host': '192.168.1.82',  # Replace with your NAS's IP address
-        'port': 49153,           # The mapped port for PostgreSQL
-        'database': 'househits',      # The database name
-        'user': 'postgres',      # The database user
-        'password': 'qwerty12345'  # The database password
+        'host': 'YOUR_HOST_IP_ADDRESS',  # Replace with your NAS's IP address
+        'port': 'YOUR_MAPPED_PORT_TO_POSTGRES',           # The mapped port for PostgreSQL
+        'database': 'YOUR_DATABASE',      # The database name
+        'user': 'YOUR_DB_USER',      # The database user
+        'password': 'YOUR_DB_USER_PASSWORD'  # The database password
     }
 
     try:
@@ -182,11 +182,7 @@ def main():
     if not conn:
         return
 
-    # Example usage of insert_into_table function
-    table_name = 'singers'
-    column_names = ['name', 'platform_links', 'genre', 'created_at']
-    values = ('Adele', 'https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY', 'Pop', 'CURRENT_TIMESTAMP')
-    insert_into_table(conn, table_name, column_names, values)
+    #YOUR CODE HERE
 
     close_connection(conn)
 
